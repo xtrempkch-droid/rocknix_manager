@@ -11,3 +11,8 @@ python3 -m venv venv
 
 # Ative o ambiente
 source venv/bin/activate
+
+
+#Agora e so instalar o pacote inicial
+pip install customtkinter zeroconf
+
