@@ -1,1 +1,13 @@
-teste
+# Instale o suporte a ambientes virtuais e o python-tk (necessário para a interface)
+sudo apt update
+sudo apt install python3-venv python3-tk -y
+
+# Crie uma pasta para o seu projeto e entre nela
+mkdir ~/RocknixManager
+cd ~/RocknixManager
+
+# Crie o ambiente virtual
+python3 -m venv venv
+
+# Ative o ambiente
+source venv/bin/activate
