@@ -26,29 +26,54 @@ from PyQt6.QtCore import QThread, pyqtSignal, Qt
 LIBRETRO_DAT_URL = "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/"
 
 MAPA_LIBRETRO_DAT = {
+    '.gb': 'Nintendo - Game Boy',
+    '.gbc': 'Nintendo - Game Boy Color',
+    '.gba': 'Nintendo - Game Boy Advance',
+    '.nds': 'Nintendo - Nintendo DS',
+    '.3ds': 'Nintendo - New Nintendo 3DS',
+    '.psp': 'Sony - PlayStation Portable',
+    '.vmu': 'Sega - Dreamcast VMU',
+    '.ws': 'Bandai - WonderSwan',
+    '.wsc': 'Bandai - WonderSwan Color',
+    '.gg': 'Sega - Game Gear',
     '.nes': 'Nintendo - Nintendo Entertainment System',
     '.sfc': 'Nintendo - Super Nintendo Entertainment System',
     '.smc': 'Nintendo - Super Nintendo Entertainment System',
-    '.gba': 'Nintendo - Game Boy Advance',
-    '.gb': 'Nintendo - Game Boy',
-    '.gbc': 'Nintendo - Game Boy Color',
+    '.n64': 'Nintendo - Nintendo 64',
+    '.v64': 'Nintendo - Nintendo 64',
+    '.z64': 'Nintendo - Nintendo 64',
+    '.gc': 'Nintendo - GameCube',
+    '.wii': 'Nintendo - Wii',
     '.md': 'Sega - Mega Drive - Genesis',
     '.sms': 'Sega - Master System - Mark III',
-    '.v64': 'Nintendo - Nintendo 64', '.z64': 'Nintendo - Nintendo 64',
-    '.pce': 'NEC - PC Engine - TurboGrafx 16', '.nds': 'Nintendo - Nintendo DS',
-    '.bin': 'Sony - PlayStation', '.cue': 'Sony - PlayStation', 
-    '.iso': 'Sony - PlayStation Portable', '.gdi': 'Sega - Dreamcast', '.cdi': 'Sega - Dreamcast'
+    '.32x': 'Sega - 32X',
+    '.dc': 'Sega - Dreamcast',
+    '.cdi': 'Sega - Dreamcast',
+    '.ps1': 'Sony - PlayStation',
+    '.psx': 'Sony - PlayStation',
+    '.ps2': 'Sony - PlayStation 2',
+    '.pce': 'NEC - PC Engine - TurboGrafx 16',
+    '.wux': 'Nintendo - Wii U',
+    '.wud': 'Nintendo - Wii U',
+    '.rpx': 'Nintendo - Wii U',
+    '.zip': 'MAME',
+    '.p8': 'PICO-8',
 }
 
 MAPA_ROCKNIX_FOLDER = {
-    '.nes': 'nes', '.sfc': 'snes', '.smc': 'snes', '.gba': 'gba', 
-    '.gb': 'gb', '.gbc': 'gbc', '.md': 'megadrive', '.sms': 'mastersystem', 
-    '.v64': 'n64', '.z64': 'n64', '.pce': 'pcengine', '.nds': 'nds', 
-    '.bin': 'psx', '.cue': 'psx', '.chd': 'psx', '.iso': 'ps2', 
-    '.cso': 'psp', '.zip': 'arcade', '.7z': 'arcade', '.gdi': 'dreamcast', '.cdi': 'dreamcast'
+    '.gb': 'gb', '.gbc': 'gbc', '.gba': 'gba',
+    '.nds': 'nds', '.3ds': '3ds', '.psp': 'psp',
+    '.nes': 'nes', '.sfc': 'sfc', '.smc': 'sfc',
+    '.n64': 'n64', '.v64': 'n64', '.z64': 'n64',
+    '.gc': 'gc', '.wii': 'wii',
+    '.md': 'megadrive', '.sms': 'mastersystem',
+    '.32x': 'sega32x', '.dc': 'dreamcast', '.cdi': 'dreamcast',
+    '.wux': 'wiiu', '.wud': 'wiiu', '.rpx': 'wiiu',
+    '.ps1': 'psx', '.psx': 'psx', '.ps2': 'ps2',
+    '.chd': 'psx', '.pce': 'pcengine', '.p8': 'pico8', '.zip': 'arcade'
 }
 
-SISTEMAS_PARA_CHD = ['psx', 'ps2', 'dreamcast', 'saturn', 'gc', 'psp', 'atomiswave']
+SISTEMAS_PARA_CHD = ['psx', 'ps2', 'dreamcast', 'saturn', 'gc', 'psp', 'atomiswave', 'naomi', 'naomi2', 'wiiu']
 SISTEMAS_DISPONIVEIS = sorted(list(set(list(MAPA_ROCKNIX_FOLDER.values()))))
 
 class RomDatabase:
