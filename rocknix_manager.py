@@ -23,7 +23,8 @@ from PyQt6.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout
 from PyQt6.QtCore import QThread, pyqtSignal, Qt
 
 # --- Configurações ---
-LIBRETRO_DAT_URL = "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/"
+#LIBRETRO_DAT_URL = "https://raw.githubusercontent.com/libretro/libretro-database/master/metadat/no-intro/"
+LIBRETRO_BASE_URL = "https://raw.githubusercontent.com/libretro/libretro-database/master/metadatas/no-intro/"
 
 MAPA_LIBRETRO_DAT = {
     '.gb': 'Nintendo - Game Boy',
