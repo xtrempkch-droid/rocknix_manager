@@ -1,36 +1,73 @@
-Markdown
+Rocknix Manager V7.2 - Recursive Fix Edition 🚀
 
-# ROCKNIX Manager - v0.1 Start Edition
+O Rocknix Manager é uma ferramenta completa para gestão de ROMs e BIOS para dispositivos que utilizam o sistema operativo Rocknix. Esta versão foca-se na restauração de funcionalidades críticas de busca e identificação automática de ficheiros.
 
-Ferramenta automatizada para gerir, otimizar e enviar ROMs para o console ROCKNIX via rede (SMB) ou Cartão SD local.
+✨ Novidades da V7.2
 
-## ✨ Funcionalidades
-- **Identificação Inteligente:** Usa a base de dados Libretro (No-Intro) para renomear ficheiros.
-- **Compressão On-the-fly:** Converte automaticamente ISO/CUE/GDI para **CHD** localmente antes de enviar.
-- **Suporte Nativo:** Dreamcast, PSP, PS1, Saturn e sistemas clássicos (NES, SNES, MD).
-- **Lógica de Rede Start Edition:** Detecção automática de pontos de montagem `games-external` e `games-internal`.
+Scan Recursivo (Restauração): Agora o gestor utiliza busca profunda (rglob), encontrando jogos em subpastas, independentemente da organização da tua biblioteca.
 
-## 🛠️ Instalação
-No terminal, dentro da pasta do projeto:
+Lista de Extensões Expandida: Suporte para mais de 40 formatos, incluindo:
 
-chmod +x install.sh
-./install.sh
+CDs: .cdi, .gdi, .chd, .iso, .cue, .pbp.
+
+Modernos: .rvz (Wii/GameCube), .wbfs, .cso.
+
+Retro: .a26, .d64, .adf, .ipf, .nes, .sfc, etc.
+
+DNA Pro (Deep Inspection): Identificação de sistemas através do cabeçalho binário (Header) para evitar que ficheiros .chd ou .iso sejam enviados para a pasta errada.
+
+🛠️ Funcionalidades Principais
+
+🎮 Gestão de ROMs
+
+Identificação Automática: O motor DNA lê os primeiros bytes do ficheiro para saber se é uma ROM de Sega Saturn, PlayStation ou Dreamcast.
+
+Compressão Automática: Opção para comprimir ficheiros em .zip em tempo real para sistemas que suportam este formato (NES, SNES, Megadrive, etc.).
+
+Envio Multi-Modo: - Samba/Network: Montagem automática via GIO/GVFS.
+
+SFTP/SSH: Envio direto via protocolo seguro (requer paramiko).
+
+Local: Gestão direta para cartões SD ou pens USB montadas no PC.
+
+🧬 Gestão de BIOS
+
+Auditoria Local: Verifica se o teu pack de BIOS tem os hashes MD5 correctos antes de fazeres o upload.
+
+Auditoria Remota: Liga-se ao teu Rocknix via SSH e verifica quais as BIOS que faltam ou que estão corrompidas no dispositivo.
+
+Deploy Inteligente: Envia apenas as BIOS válidas para a pasta correcta (/storage/roms/bios).
+
+🚀 Como Utilizar
+
+Instala as dependências:
+
+pip install PyQt6 paramiko
 
 
-🚀 Como usar
+Executa o Script:
 
-    Ligue o seu console e conecte-o à mesma rede Wi-Fi.
+python rocknix_manager_v7_2_recursive.py
 
-    Anote o IP do console.
 
-    Abra o gestor: ./rocknix_manager.py.
+Modo Rede: - Clica em "Sincronizar Rede". O programa tentará encontrar o teu dispositivo automaticamente pelo nome ROCKNIX.local.
 
-    Faça o Scan da sua pasta de ROMs no PC.
+Adicionar Jogos:
 
-    Digite o IP e clique em Iniciar.
+Clica em "Adicionar ROMs" e seleciona a pasta raiz onde guardas os teus jogos. O scan recursivo tratará do resto.
+
+Enviar:
+
+Define o sistema de destino (se o DNA não o fizer por ti) e clica em "Enviar ROMs".
 
 📋 Requisitos
 
-    Python 3.x
+Python 3.8+
 
-    chdman e 7z instalados no sistema (para compressão).
+PyQt6 (Interface Gráfica)
+
+Paramiko (Opcional, para funções SSH/SFTP)
+
+GIO/GVFS (Recomendado em Linux para montagem automática de pastas de rede)
+
+Desenvolvido para a comunidade Rocknix. Mantém os teus jogos organizados e as tuas BIOS validadas!
