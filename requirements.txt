@@ -1,19 +1,5 @@
-Interface Gráfica (GUI)
-
-PyQt6>=6.4.0
-
-Protocolos de Rede e Acesso Remoto
-
-Utilizado para auditoria de BIOS e transferência via SFTP/SSH
-
-paramiko>=3.0.0
-
-Requisições HTTP
-
-Utilizado para baixar bases de dados ou verificar atualizações
-
-requests>=2.28.0
-
-Utilitários de Sistema (Dependências do Python)
-
-Nota: pathlib, hashlib, socket, etc., já estão incluídos na biblioteca padrão do Python 3.8+
+PyQt6==6.6.1
+paramiko==3.4.0
+requests==2.31.0
+PyYAML==6.0.1
+cryptography>=42.0.0
