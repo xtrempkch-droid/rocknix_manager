@@ -1,3 +1,60 @@
+Rocknix Manager 🎮
+
+[Português] | [English]
+
+O Rocknix Manager é uma ferramenta para facilitar a gestão de jogos, bios e configurações para o sistema ROCKNIX.
+
+🇧🇷 Português
+
+Instalação Rápida
+
+Copie e cole o comando abaixo no seu terminal para instalar automaticamente:
+
+curl -sSL [https://raw.githubusercontent.com/xtrempkch-droid/rocknix_manager/main/install.sh](https://raw.githubusercontent.com/xtrempkch-droid/rocknix_manager/main/install.sh) | bash
+
+
+Requisitos
+
+Python 3.x
+
+Git
+
+Como usar
+
+Após a instalação, entre na pasta e execute:
+
+cd ~/rocknix_manager
+source venv/bin/activate
+python3 main.py
+
+
+🇺🇸 English
+
+Quick Installation
+
+Copy and paste the command below into your terminal to install automatically:
+
+curl -sSL [https://raw.githubusercontent.com/xtrempkch-droid/rocknix_manager/main/install.sh](https://raw.githubusercontent.com/xtrempkch-droid/rocknix_manager/main/install.sh) | bash
+
+
+Requirements
+
+Python 3.x
+
+Git
+
+How to use
+
+After installation, enter the folder and run:
+
+cd ~/rocknix_manager
+source venv/bin/activate
+python3 main.py
+
+
+![alt text](https://github.com/xtrempkch-droid/rocknix_manager/blob/main/ui.png)
+
+
 Rocknix Manager V7.2 - Recursive Fix Edition 🚀
 
 O Rocknix Manager é uma ferramenta completa para gestão de ROMs e BIOS para dispositivos que utilizam o sistema operativo Rocknix. Esta versão foca-se na restauração de funcionalidades críticas de busca e identificação automática de ficheiros.
@@ -44,11 +101,9 @@ Instala as dependências:
 
 pip install PyQt6 paramiko
 
-
 Executa o Script:
 
 python rocknix_manager_v7_2_recursive.py
-
 
 Modo Rede: - Clica em "Sincronizar Rede". O programa tentará encontrar o teu dispositivo automaticamente pelo nome ROCKNIX.local.
 
