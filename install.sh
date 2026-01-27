@@ -6,6 +6,7 @@ set -e
 REPO_URL="https://github.com/xtrempkch-droid/rocknix_manager.git"
 TARGET_DIR="$HOME/rocknix_manager"
 
+
 echo "------------------------------------------"
 echo "  Rocknix Manager - Setup Tool"
 echo "------------------------------------------"
@@ -23,6 +24,7 @@ if [ -d "$TARGET_DIR" ]; then
     git pull
 else
     echo "📥 Clonando repositório..."
+    
     git clone "$REPO_URL" "$TARGET_DIR"
     cd "$TARGET_DIR"
 fi
@@ -44,7 +46,11 @@ fi
 
 echo ""
 echo "✅ Instalação concluída com sucesso!"
+
+cd ~/rocknix_manager
+chmod +x Rocknix_Manager.AppImage
+cp Rocknix_Manager.AppImage  "$(xdg-user-dir DESKTOP)"
 echo "------------------------------------------"
 echo "Para rodar o programa:"
-echo "cd ~/rocknix_manager && source venv/bin/activate && python3 main.py"
+echo "cd ~/rocknix_manager && chmod +x Rocknix_Manager.AppImage "
 echo "------------------------------------------"
