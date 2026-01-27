@@ -3,7 +3,7 @@
 
 set -e
 
-REPO_URL="[https://github.com/xtrempkch-droid/rocknix_manager.git](https://github.com/xtrempkch-droid/rocknix_manager.git)"
+REPO_URL="https://github.com/xtrempkch-droid/rocknix_manager.git"
 TARGET_DIR="$HOME/rocknix_manager"
 
 echo "------------------------------------------"
