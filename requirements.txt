@@ -1,5 +1,8 @@
+requests
+pillow
 PyQt6==6.6.1
 paramiko==3.4.0
 requests==2.31.0
 PyYAML==6.0.1
 cryptography>=42.0.0
+# Adicione outras dependências abaixo se houver
