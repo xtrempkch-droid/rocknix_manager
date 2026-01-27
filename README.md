@@ -24,8 +24,10 @@ Como usar
 Após a instalação, entre na pasta e execute:
 
 cd ~/rocknix_manager
-source venv/bin/activate
-python3 main.py
+
+ou 
+
+abrir no desktop
 
 
 🇺🇸 English
@@ -48,9 +50,9 @@ How to use
 After installation, enter the folder and run:
 
 cd ~/rocknix_manager
-source venv/bin/activate
-python3 main.py
 
+or 
+open in desktop
 
 ![alt text](https://github.com/xtrempkch-droid/rocknix_manager/blob/main/ui.png)
 
